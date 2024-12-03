@@ -6,6 +6,7 @@ import Day03 (solve)
 
 import System.Environment (getArgs)
 import Text.Printf (printf)
+import Options.Applicative
 
 data Options = Options
   { day  :: Int
