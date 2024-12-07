@@ -26,6 +26,6 @@ def part_2(test: bool = False) -> int:
     r_ctr = dict(Counter(r_pairs))
     return sum(x * r_ctr.get(x, 0) for x in l_pairs)
 
-
-print(part_1())
-print(part_2())
+if __name__ == "__main__":
+    print(part_1())
+    print(part_2())

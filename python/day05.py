@@ -17,16 +17,17 @@ def parser(test):
             rset.add(int(itms[0]))
             rset.add(int(itms[1]))
             rules.append((int(itms[0]), int(itms[1])))
-    print(rules, plines)
-    return rules, plines
+    
+    befored = defaultdict(list)
+    afterd = defaultdict(list)
+    rule_d = {}
+    for r in rules:
+        afterd[r[0]].append(r[1])
+        befored[r[1]].append(r[0])
+        
+    return rules, plines, befored, afterd
 
-rules, lines = parser(False)
-befored = defaultdict(list)
-afterd = defaultdict(list)
-rule_d = {}
-for r in rules:
-    afterd[r[0]].append(r[1])
-    befored[r[1]].append(r[0])
+
 def sorter(a, b):
     global befored, afterd
     if b in befored[a]:
@@ -39,21 +40,54 @@ def sorter(a, b):
         return -1
     else:
         return 0
-def part_1():
+    
+def part_1(test: bool = False):
+    rules, lines, befored, afterd = parser(test)
+    
+    def sorter(a, b):
+        if b in befored[a]:
+            return 1
+        elif a in befored[b]:
+            return -1
+        elif a in afterd[b]:
+            return 1
+        elif b in afterd[a]:
+            return -1
+        else:
+            return 0
+    
     summa = 0
     for l in lines:
         sl = sorted(l, key=cmp_to_key(sorter))
         if sl == l:
             med = sl[len(sl)//2]
             summa += med
-    print(summa)
+    return summa
 
-def part_2():
+def part_2(test: bool = False):
+    
+    rules, lines, befored, afterd = parser(test)
     summa = 0
+    
+    def sorter(a, b):
+        if b in befored[a]:
+            return 1
+        elif a in befored[b]:
+            return -1
+        elif a in afterd[b]:
+            return 1
+        elif b in afterd[a]:
+            return -1
+        else:
+            return 0
+    
     for l in lines:
         sl = sorted(l, key=cmp_to_key(sorter))
         if sl != l:
             med = sl[len(sl)//2]
             summa += med
-    print(summa)
-part_2()
+    return summa
+
+if __name__ == "__main__":
+    print(part_1())
+    print(part_2())

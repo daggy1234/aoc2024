@@ -29,6 +29,6 @@ def part_2(test: bool = False):
                 tot += int(procd[0]) * int(procd[1])
     return tot
 
-
-print(part_1())
-print(part_2())
+if __name__ == "__main__":
+    print(part_1())
+    print(part_2())
