@@ -1,6 +1,6 @@
 # AOC 2024
 
-![](https://img.shields.io/badge/day%20📅-16-blue) ![](https://img.shields.io/badge/stars%20⭐-27-yellow) ![](https://img.shields.io/badge/days%20completed-13-red)
+![](https://img.shields.io/badge/day%20📅-17-blue) ![](https://img.shields.io/badge/stars%20⭐-29-yellow) ![](https://img.shields.io/badge/days%20completed-14-red)
 
 Haskell Setup heaivly inspired by : https://github.com/Abizern/aoc-2023-haskell
 
@@ -25,6 +25,7 @@ Haskell Setup heaivly inspired by : https://github.com/Abizern/aoc-2023-haskell
 | [Day 13](https://adventofcode.com/2024/day/13) | ⭐ | ⭐ |
 | [Day 14](https://adventofcode.com/2024/day/14) | ⭐ | ⭐ |
 | [Day 15](https://adventofcode.com/2024/day/15) | ⭐ |   |
+| [Day 16](https://adventofcode.com/2024/day/16) | ⭐ | ⭐ |
 <!--- advent_readme_stars table --->
 
 ## Haskell
