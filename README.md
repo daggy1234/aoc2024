@@ -1,6 +1,6 @@
 # AOC 2024
 
-![](https://img.shields.io/badge/day%20📅-18-blue) ![](https://img.shields.io/badge/stars%20⭐-29-yellow) ![](https://img.shields.io/badge/days%20completed-14-red)
+![](https://img.shields.io/badge/day%20📅-19-blue) ![](https://img.shields.io/badge/stars%20⭐-29-yellow) ![](https://img.shields.io/badge/days%20completed-14-red)
 
 Haskell Setup heaivly inspired by : https://github.com/Abizern/aoc-2023-haskell
 
